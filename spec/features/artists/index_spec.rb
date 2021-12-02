@@ -8,7 +8,7 @@ RSpec.describe '/artists/index.html.erb', type: :feature do
         artist_2 = Artist.create!(name: 'Reel Big Fish')
 
         visit '/artists' 
-        save_and_open_page
+        # save_and_open_page
 
         expect(page).to have_content(artist_1.name)
         expect(page).to have_content(artist_2.name)
