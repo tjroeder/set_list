@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'Songs index page', type: :feature do
   it 'can see all songs, their titles and play count' do
-    # artist = Artist.create(name: "someone")
-    song_1 = Song.create( 
+    artist = Artist.create(name: "someone")
+    song_1 = artist.songs.create!( 
                           title:       "I Really Like You",
                           length:      208,
                           play_count:  243810867)
 
-    song_2 = Song.create( 
+    song_2 = artist.songs.create!( 
                           title:       "Call Me Maybe",
                           length:      199,
                           play_count:  1214722172)
